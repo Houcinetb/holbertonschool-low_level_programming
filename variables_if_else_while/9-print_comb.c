@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main -all combination of single digit numberd
+ * main -all combination of single digit numbers
  *
  * Return: Always 0 (Success)
  */
 
-int maint(void)
+int main(void)
 {
 	int digit;
 
