@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * puts_half - function that prints half of a string
- * followed by a new line.
- * @str: printed strings
- */
+* puts_half - function that prints half of a string
+* followed by a new line.
+* @str: printed strings
+*/
 void puts_half(char *str)
 {
 	int len = 0;
@@ -19,7 +19,7 @@ void puts_half(char *str)
 	{
 		for (i = len / 2; str[i] != '\0'; i++)
 		{
-			putchar(str[i]);
+			_putchar(str[i]);
 		}
 	}
 
@@ -27,9 +27,9 @@ void puts_half(char *str)
 	{
 		for (i = (len + 1) / 2; str[i] != '\0'; i++)
 		{
-			putchar(str[i]);
+			_putchar(str[i]);
 		}
 	}
 
-	putchar('\n');
+	_putchar('\n');
 }
