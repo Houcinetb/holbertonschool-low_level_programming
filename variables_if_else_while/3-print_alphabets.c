@@ -1,36 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * maon - Entry point
- *
- * Description: 'the program's description'
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char c;
+char abc;
 
-	c = 'a';
-	while (c <= 'z')
+
+	for (abc = 'a'; abc <= 'z'; abc++)
 	{
-		putchar(c);
-		c++;
-
+		putchar(abc);
 	}
-
-	c = 'A';
-	while (c <= 'z')
+	for (abc = 'A', abc <= 'Z'; abc++)
 	{
-		putchar(c);
-		c++;
-
+		putchar(abc);
 	}
-
 	putchar('\n');
-
 	return (0);
 }
