@@ -1,15 +1,10 @@
 #include "main.h"
 /**
- * _isupper - function that checks for uppercase character.
- *
- *@c: character.
- *
- *Return: 1 if uppercase else return 0 otherwise.
+ * reset_to_98 - function thake  pointer to an int as parameter.
+ *@p: int parameter
+ * Return: Always(0)
  */
-int _isupper(int c)
+void reset_to_98(int *p)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else
-		return (0);
+	*p = 98;
 }
