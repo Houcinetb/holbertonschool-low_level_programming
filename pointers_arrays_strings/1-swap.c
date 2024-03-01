@@ -1,31 +1,27 @@
 #include "main.h"
-
 /**
- * _strncat - function that concatenates two strings
- *@src: input pointer
- *@dest: pointer output
- *@n: input of byte (size)
+ * rev_string - function for reverses a string.
  *
- * Return: value is result dest
-*/
+ * @s: pointeur to a string.
+ *
+ */
 
-char *_strncat(char *dest, char *src, int n)
+void rev_string(char *s)
 {
-	int a, b;
+	int deb, mil, fin, size;
+	char temp;
 
-	a = 0;
-	b = 0;
+	for (size = 0; s[size]; size++)
+		;
 
-	while (dest[a])
+	mil = size / 2;
+	fin = size - 1;
+
+	for (deb = 0; deb < mil; deb++)
 	{
-		a++;
+		temp = s[deb];
+		s[deb] = s[fin];
+		s[fin] = temp;
+		fin--;
 	}
-	while (b < n && src[b])
-	{
-		dest[a] = src[b];
-		a++;
-		b++;
-	}
-	dest[a] = '\0';
-	return (dest);
 }
