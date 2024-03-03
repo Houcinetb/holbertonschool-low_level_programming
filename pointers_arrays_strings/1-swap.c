@@ -1,27 +1,17 @@
 #include "main.h"
 /**
- * rev_string - function for reverses a string.
+ * swap_int - function swaps the values of two integers
  *
- * @s: pointeur to a string.
- *
+ *@a: fisrt integers.
+ *@b: second integers.
  */
-
-void rev_string(char *s)
+void swap_int(int *a, int *b)
 {
-	int deb, mil, fin, size;
-	char temp;
+	int swit;
 
-	for (size = 0; s[size]; size++)
-		;
+	swit = *a;
 
-	mil = size / 2;
-	fin = size - 1;
+	*a = *b;
 
-	for (deb = 0; deb < mil; deb++)
-	{
-		temp = s[deb];
-		s[deb] = s[fin];
-		s[fin] = temp;
-		fin--;
-	}
+	*b = swit;
 }
