@@ -1,20 +1,38 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _strcmp - function that compares twho strings
- * @s1: first string
- * @s2: second string
+ * _strspn - get the length of a prefix substring
  *
- * Return: the result
+ * @s: segment to return bytes from
+ * @accept: bytes to include
+ *
+ * Return: number of bytes in the initial segment of s
+ * which consist only of bytes from accept
+ *
  */
 
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-	while (*s1 && *s2 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
+	int i, j;
+	int c = 0;
 
-	return (*s1 - *s2);
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] != ' ')
+		{
+			for (j = 0; accept[j] != '\0'; j++)
+			{
+				if (s[i] == accept[j])
+				{
+					c++;
+				}
+			}
+		}
+		else
+		{
+			return (c);
+		}
+	}
+	rturn (c);
 }
